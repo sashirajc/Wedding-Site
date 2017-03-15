@@ -1,9 +1,9 @@
 <?php
 
-$name = $_POST["name"];
-$wish = $_POST["wish"];
+// $name = $_POST["name"];
+// $wish = $_POST["wish"];
 
-addWish($name,$wish);
+addWish($_POST[name],$_POST[wish]);
 
 function query_Executor($query){
 	include "includes/creds.php";
@@ -26,6 +26,7 @@ function query_Executor($query){
 
 
 function addWish($name,$wish){
-	query_Executor("INSERT INTO `weddingDB`.`Wishes` (`Name`, `Wishes`) VALUES ('". $name ."', '" . $wish . "');");
+    $time_created = date("Y-m-d H:i:s");
+	query_Executor("INSERT INTO `weddingDB`.`Wishes` (`Name`, `Wishes`,`wishes_dt`) VALUES ('". $name ."', '" . $wish . "','" . $time_created . "');");
 }
 ?>

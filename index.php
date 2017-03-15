@@ -18,11 +18,6 @@ function query_Executor($query){
 }
 // $data = query_Executor('SELECT Name FROM weddingDB.Wishes WHERE idWishes="0"')
 
-
-function addWish($name,$wish){
-	query_Executor("INSERT INTO `weddingDB`.`Wishes` (`Name`, `Wishes`) VALUES ('". $name ."', '" . $wish . "');");
-}
-
 function addRSVP($name,$attending,$food){
 	query_Executor("INSERT INTO `weddingDB`.`RSVP` (`Name`,`Attending`,`Food`) VALUES ('". $name ."','" . $attending . "','". $food ."');");
 }
@@ -104,7 +99,7 @@ function getWish(){
 						<li class="active"><a href="index.php">Home</a></li>
 						<li id="event_button"><a href="#">Events</a></li>
 						<li id="story_button"><a href="#fh5co-couple-story">Timeline</a></li>
-						<li id="gallery_button"><a href="#fh5co-gallery">Gallery</a></li>
+						<!-- <li id="gallery_button"><a href="#fh5co-gallery">Gallery</a></li> -->
 						<li id="testimonial_button"><a href="#fh5co-testimonial">Wishes</a></li>
 						<li id="rsvp_button"><a href="#fh5co-started">RSVP</a></li>
 					</ul>
@@ -331,7 +326,7 @@ function getWish(){
 		</div>
 	</div>
 
-	<div id="fh5co-gallery" class="fh5co-section-gray">
+	<!-- <div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -343,23 +338,23 @@ function getWish(){
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
-
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); ">
-						<a href="images/gallery-1.jpg">
-							<div class="case-studies-summary">
+ -->
+						<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> -->
+						<!-- <a href="images/gallery-1.jpg"> -->
+							<!-- <div class="case-studies-summary">
 								<span>Sashi's family</span>
 								<h2>Sashi's family</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); ">
-						<a href="#" class="color-2">
-							<div class="case-studies-summary">
+							</div> -->
+						<!-- </a> -->
+					<!-- </li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> -->
+						<!-- <a href="#" class="color-2"> -->
+							<!-- <div class="case-studies-summary">
 								<span>Elsie's family</span>
 								<h2>Elsie's family</h2>
-							</div>
-						</a>
-					</li>
+							</div> -->
+						<!-- </a> -->
+					<!-- </li>
 
 
 					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
@@ -395,7 +390,7 @@ function getWish(){
 								</div>
 							</a>
 						</li>
-<!--
+
 						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
 							<a href="#" class="color-4">
 								<div class="case-studies-summary">
@@ -421,11 +416,11 @@ function getWish(){
 								</div>
 							</a>
 						</li> -->
-					</ul>
+					<!-- </ul>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	<div id="fh5co-testimonial">
@@ -472,21 +467,22 @@ function getWish(){
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 							<span>Add your wishes to Sashi and Elsie</span>
 							<h2>Write a Wish</h2>
-							<form class="form-inline" action="addWish.php" method="post">
+							<div id="successText"></div>
+							<form class="form-inline" onsubmit="return false">
 								<div class="col-md-4 col-sm-4">
 									<div class="form-group">
 										<label for="name" class="sr-only">Name</label>
-										<input type="name" class="form-control" name="name" id="name" placeholder="Name">
+										<input type="text" class="form-control" name="name" id="name_wish_form" placeholder="Name">
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4">
 									<div class="form-group">
 										<label for="wishes" class="sr-only">Wishes</label>
-										<input type="text" class="form-control" name="wish" id="wishes" placeholder="Write your wishes"sing >
+										<input type="text" class="form-control" name="wish" id="wishes_wish_form" placeholder="Write your wishes"sing >
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4">
-									<button type="submit" class="btn btn-default btn-block">Send Wish</button>
+									<button type="submit" class="btn btn-default btn-block" id="wish-submit">Send Wish</button>
 								</div>
 							</form>
 						</div>
@@ -515,13 +511,19 @@ function getWish(){
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+							<div class="radio-inline">
+								<label class="radio-inline">
+									<input type="radio" name= "optradio" class="form-control" id="radio-button-1">Attending</input>
+								</label>
+							<!-- </div>
+							<div class="radio-inline"> -->
+								<label class="radio-inline">
+									<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending </input>
+								</label>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">I am Attending</button>
+							<button type="submit" class="btn btn-default btn-block">Submit</button>
 						</div>
 					</form>
 				</div>
@@ -581,7 +583,7 @@ function getWish(){
 
 	var differenceTravel = fromTime.getTime() - toTime.getTime();
 	var seconds = Math.floor((differenceTravel) / (1000));
-	console.log(seconds);
+	// console.log(seconds);
 
 
 	var d = new Date(new Date().getTime() + (seconds*1000));
@@ -609,32 +611,56 @@ function getWish(){
     $('html, body').animate({
         scrollTop: $("#fh5co-event").offset().top
     }, 2000);
-});
+	});
 
-$("#story_button").click(function() {
-$('html, body').animate({
-	scrollTop: $("#fh5co-couple-story").offset().top
-}, 2000);
-});
+	$("#story_button").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#fh5co-couple-story").offset().top
+		}, 2000);
+	});
 
-$("#gallery_button").click(function() {
-$('html, body').animate({
-	scrollTop: $("#fh5co-gallery").offset().top
-}, 2000);
-});
+	$("#gallery_button").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#fh5co-gallery").offset().top
+		}, 2000);
+	});
 
-$("#testimonial_button").click(function() {
-$('html, body').animate({
-	scrollTop: $("#fh5co-testimonial").offset().top
-}, 2000);
-});
+	$("#testimonial_button").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#fh5co-testimonial").offset().top
+		}, 2000);
+	});
 
-$("#rsvp_button").click(function() {
-$('html, body').animate({
-	scrollTop: $("#fh5co-started").offset().top
-}, 2000);
-});
-</script>
+	$("#rsvp_button").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#fh5co-started").offset().top
+		}, 2000);
+	});
+
+	$("#wish-submit").click(function(){
+		var name = $("#name_wish_form").val();
+		var wishes = $('#wishes_wish_form').val();
+
+		var postData = 'name='+name+"&wish="+wishes;
+
+		$.ajax({
+			url:"addWish.php",
+			type:"POST",
+			data:postData,
+			success: function(data,status,xhr)
+			{
+				$("#sucessText").html("Successfully added your message.");
+				$("#name_wish_form").val('');
+				$('#wishes_wish_form').val('');
+			},
+			error: function(jqXHR,status,errorThrown)
+			{
+				$("successText").html("There was an error.");
+				console.log("Error encountered");
+			}
+		});
+	});
+	</script>
 
 	</body>
-</html>
+	</html>
