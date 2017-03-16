@@ -18,10 +18,6 @@ function query_Executor($query){
 }
 // $data = query_Executor('SELECT Name FROM weddingDB.Wishes WHERE idWishes="0"')
 
-function addRSVP($name,$attending,$food){
-	query_Executor("INSERT INTO `weddingDB`.`RSVP` (`Name`,`Attending`,`Food`) VALUES ('". $name ."','" . $attending . "','". $food ."');");
-}
-
 function getWish(){
 	$data = query_Executor("SELECT Name,Wishes FROM weddingDB.Wishes");
 	// echo "<script>console.log('". $data[1] ."');</script>";
@@ -491,8 +487,26 @@ function getWish(){
 		</div>
 	</div>
 
+	<!-- Modal -->
+  <div class="modal fade" id="wishesModal" role="dialog">
+    <div class="modal-dialog">
+	<!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Wishes</h4>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for your wishes.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+  </div>
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_1.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -503,33 +517,87 @@ function getWish(){
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
+					<form class="form-inline" onsubmit="return false">
+						<div class="row">
+							<div class="col-md-4 col-sm-4 col-md-offset-1">
+								<div class="form-group">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" class="form-control" id="rsvp_name" placeholder="Name">
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4 col-md-offset-1">
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="rsvp_email" placeholder="email">
+								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="radio-inline">
-								<label class="radio-inline">
+						<div class="row">
+						<div class="col-md-4 col-sm-4 col-md-offset-1">
+							<div class="radio-inline form-group">
+								<label class="radio-inline sr-only">Attending</label>
 									<input type="radio" name= "optradio" class="form-control" id="radio-button-1">Attending</input>
-								</label>
-							<!-- </div>
-							<div class="radio-inline"> -->
-								<label class="radio-inline">
-									<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending </input>
-								</label>
+
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Submit</button>
+							<div class="radio-inline form-group">
+								<label class="radio-inline sr-only">Not Attending</label>
+									<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending</input>
+							</div>
 						</div>
+					</div>
+
+					<div class="row collapse" id="attending-options">
+						<div class="col-md-5 col-sm-5 col-md-offset-1">
+							Number of persons:
+							<input type="number" name="persons" id="rsvp_persons" min="1" max="5">
+
+					</div>
+					<div class="col-md-5 col-sm-5 col-md-offset-1">
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food Preference
+								<span class="caret"></span>
+							</button>
+								<ul class="dropdown-menu" role="menu">
+									<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
+									<li id="non-veg"><a role="menuitem" tabindex="-1">Non-vegetarian</a></li>
+								</ul>
+						</div>
+					</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-md-offset-4">
+							<div class="form-group">
+								<button type="submit" class="btn btn-default btn-block" id="rsvp-submit">Submit</button>
+							</div>
+						</div>
+					</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal -->
+  <div class="modal fade" id="rsvpModal" role="dialog">
+	<div class="modal-dialog">
+	<!-- Modal content-->
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  <h4 class="modal-title">RSVP</h4>
+		</div>
+		<div class="modal-body">
+		  <p>Thank you for indicating your preference.</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	  </div>
+  </div>
+  </div>
+
 
 
 	<footer id="fh5co-footer" role="contentinfo">
@@ -589,7 +657,9 @@ function getWish(){
 	var d = new Date(new Date().getTime() + (seconds*1000));
 
 	// Gaurang' Code ends here......................................................................................
-
+	var attending_status = 0;
+	var persons = 0;
+	var veg=0;
     // var d = new Date(new Date().getTime() + 282 * 120 * 120 * 2004);
 	// console.log(d);
     // default example
@@ -660,6 +730,66 @@ function getWish(){
 			}
 		});
 	});
+
+	$("#rsvp-submit").click(function(){
+		var name = $("#rsvp_name").val();
+		var email = $("#rsvp_email").val();
+		var persons = $("#rsvp_persons").val();
+
+		var postData = 'name='+name+"&email="+email+"&attending="+attending_status+"&persons="+persons+"&veg="+veg;
+		// console.log(postData);
+		$.ajax({
+			url:"addRSVP.php",
+			type:"POST",
+			data:postData,
+			success: function(data,status,xhr)
+			{
+				$("#rsvp_name").val('');
+				$("#rsvp_email").val('');
+				$("#rsvp_persons").val('');
+			},
+			error: function(jqXHR,status,errorThrown)
+			{
+				console.log("Error RSVP Encountered");
+			}
+		});
+	});
+
+	// $(document).ready(function(){
+	// 	$('#attending-options').removeClass('hidden');
+	// });
+
+	$("#veg").click(function(){
+		veg = 1;
+	});
+
+	$("#non-veg").click(function(){
+		veg = 0;
+	});
+
+	$("#radio-button-2").click(function(){
+		$('#attending-options').addClass('collapse');
+	 	attending_status = 0;
+		console.log(attending_status);
+	});
+
+	$("#radio-button-1").click(function(){
+		$('#attending-options').removeClass('collapse');
+		attending_status = 1;
+		console.log(attending_status);
+	});
+
+	$(document).ready(function(){
+		$("#wish-submit").click(function(){
+			$("#wishesModal").modal({keyboard: true});
+    });
+});
+
+$(document).ready(function(){
+	$("#rsvp-submit").click(function(){
+		$("#rsvpModal").modal({keyboard: true});
+});
+});
 	</script>
 
 	</body>
