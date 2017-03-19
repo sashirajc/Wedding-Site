@@ -95,7 +95,7 @@ function getWish(){
 						<li class="active"><a href="index.php">Home</a></li>
 						<li id="event_button"><a href="#">Events</a></li>
 						<li id="story_button"><a href="#fh5co-couple-story">Timeline</a></li>
-						<!-- <li id="gallery_button"><a href="#fh5co-gallery">Gallery</a></li> -->
+						<li id="gallery_button"><a href="#fh5co-gallery">Gallery</a></li>
 						<li id="testimonial_button"><a href="#fh5co-testimonial">Wishes</a></li>
 						<li id="rsvp_button"><a href="#fh5co-started">RSVP</a></li>
 					</ul>
@@ -322,7 +322,7 @@ function getWish(){
 		</div>
 	</div>
 
-	<!-- <div id="fh5co-gallery" class="fh5co-section-gray">
+	 <div id="fh5co-gallery" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -333,90 +333,84 @@ function getWish(){
 			</div>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
-					<ul id="fh5co-gallery-list">
- -->
-						<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> -->
-						<!-- <a href="images/gallery-1.jpg"> -->
-							<!-- <div class="case-studies-summary">
-								<span>Sashi's family</span>
-								<h2>Sashi's family</h2>
-							</div> -->
-						<!-- </a> -->
-					<!-- </li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-2.jpg); "> -->
-						<!-- <a href="#" class="color-2"> -->
-							<!-- <div class="case-studies-summary">
-								<span>Elsie's family</span>
-								<h2>Elsie's family</h2>
-							</div> -->
-						<!-- </a> -->
-					<!-- </li>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    						<li data-target="#myCarousel" data-slide-to="1"></li>
+    						<li data-target="#myCarousel" data-slide-to="2"></li>
+    						<li data-target="#myCarousel" data-slide-to="3"></li>
+							<li data-target="#myCarousel" data-slide-to="4"></li>
+							<li data-target="#myCarousel" data-slide-to="5"></li>
+							<li data-target="#myCarousel" data-slide-to="6"></li>
+  						</ol>
 
+  						<!-- Wrapper for slides -->
+  						<div class="carousel-inner" role="listbox">
+    						<div class="item active">
+      							<img src="/images/Gallery/Gallery-01.jpg" alt="Sashi and Lavanya">
+      							<div class="carousel-caption">
+        							<h3>Sashi and Lavanya</h3>
+        							<p>April 2014</p>
+      							</div>
+    						</div>
 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-3.jpg); ">
-						<a href="#" class="color-3">
-							<div class="case-studies-summary">
-								<span>Poo Vaikradhu</span>
-								<h2>Poo Vaikradhu</h2>
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-4.jpg); ">
-						<a href="#" class="color-4">
-							<div class="case-studies-summary">
-								<span>Engagement</span>
-								<h2>Engagement</h2>
-							</div>
-						</a>
-					</li>
+    						<div class="item">
+      							<img src="/images/Gallery/Gallery-02.jpg" alt="Sashi's Graduation">
+      							<div class="carousel-caption">
+        							<h3>Sashi's Graduation</h3>
+        							<p>April 2016</p>
+      							</div>
+    						</div>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-5.jpg); ">
-							<a href="#" class="color-3">
-								<div class="case-studies-summary">
-									<span>Wedding</span>
-									<h2>Wedding</h2>
-								</div>
-							</a>
-						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-6.jpg); ">
-							<a href="#" class="color-4">
-								<div class="case-studies-summary">
-									<span>Photoshoot</span>
-									<h2>Photoshoot</h2>
-								</div>
-							</a>
-						</li>
+    						<div class="item">
+      							<img src="/images/Gallery/Gallery-03.jpg" alt="Sashi">
+      							<div class="carousel-caption">
+        							<h3>Sashi in Sikkim</h3>
+        							<p>April 2012</p>
+      							</div>
+    						</div>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-7.jpg); ">
-							<a href="#" class="color-4">
-								<div class="case-studies-summary">
-									<span>35 Photos</span>
-									<h2>Two Glas of Juice</h2>
-								</div>
-							</a>
-						</li>
+    						<div class="item">
+      							<img src="/images/Gallery/Gallery-04.jpg" alt="Elsie">
+      							<div class="carousel-caption">
+        							<h3>Elsie in Dubai</h3>
+        							<p>December 2016</p>
+      							</div>
+    						</div>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-8.jpg); ">
-							<a href="#" class="color-5">
-								<div class="case-studies-summary">
-									<span>90 Photos</span>
-									<h2>Timer starts now!</h2>
-								</div>
-							</a>
-						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-9.jpg); ">
-							<a href="#" class="color-6">
-								<div class="case-studies-summary">
-									<span>56 Photos</span>
-									<h2>Beautiful sunset</h2>
-								</div>
-							</a>
-						</li> -->
-					<!-- </ul>
+							<div class="item">
+      							<img src="/images/Gallery/Gallery-05.jpg" alt="Elsie">
+      							<div class="carousel-caption">
+        							<h3>Pledged to be married</h3>
+        							<p>February 2017</p>
+      							</div>
+    						</div>
+
+							<div class="item">
+      							<img src="/images/Gallery/Gallery-06.jpg" alt="Sashi">
+      							<div class="carousel-caption">
+        							<h3>Sashi and Family</h3>
+        							<p>September 2014</p>
+      							</div>
+    						</div>
+  						</div>
+
+  						<!-- Left and right controls -->
+  						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    						<span class="sr-only">Previous</span>
+  						</a>
+
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    						<span class="sr-only">Next</span>
+  						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 
 	<div id="fh5co-testimonial">
