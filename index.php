@@ -19,9 +19,12 @@ function query_Executor($query){
 // $data = query_Executor('SELECT Name FROM weddingDB.Wishes WHERE idWishes="0"')
 
 function getWish(){
-	$data = query_Executor("SELECT Name,Wishes FROM weddingDB.Wishes");
+	return query_Executor("SELECT Name,Wishes FROM weddingDB.Wishes LIMIT 3");
+
 	// echo "<script>console.log('". $data[1] ."');</script>";
 }
+
+$wish = getWish();
 
 ?>
 
@@ -367,10 +370,10 @@ function getWish(){
   						<!-- Wrapper for slides -->
   						<div class="carousel-inner" role="listbox">
     						<div class="item active">
-      							<img src="/images/Gallery/Gallery-01.jpg" alt="Sashi and Lavanya">
+      							<img src="/images/Gallery/Gallery-01.jpg" alt="Elsie's Graduation">
       							<div class="carousel-caption">
-        							<h3>Sashi and Lavanya</h3>
-        							<p>April 2014</p>
+        							<h3>Elsie's Graduation</h3>
+        							<p>June 2015</p>
       							</div>
     						</div>
 
@@ -379,14 +382,6 @@ function getWish(){
       							<div class="carousel-caption">
         							<h3>Sashi's Graduation</h3>
         							<p>April 2016</p>
-      							</div>
-    						</div>
-
-    						<div class="item">
-      							<img src="/images/Gallery/Gallery-03.jpg" alt="Sashi">
-      							<div class="carousel-caption">
-        							<h3>Sashi in Sikkim</h3>
-        							<p>April 2012</p>
       							</div>
     						</div>
 
@@ -447,25 +442,17 @@ function getWish(){
 							<div class="owl-carousel-fullwidth">
 								<div class="item">
 									<div class="testimony-slide active text-center">
-										<span>John Doe</span>
+										<span><?php echo $wish[0]; ?></span>
 										<blockquote>
-											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
+											<p><?php echo $wish[1]; ?></p>
 										</blockquote>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-slide active text-center">
-										<span>John Doe</span>
+										<span><?php echo $wish[0]; ?></span>
 										<blockquote>
-											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
-										</blockquote>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<span>John Does</span>
-										<blockquote>
-											<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+											<p><?php echo $wish[1]; ?></p>
 										</blockquote>
 									</div>
 								</div>

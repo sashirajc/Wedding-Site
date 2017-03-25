@@ -22,7 +22,11 @@
 	var offcanvasMenu = function() {
 
 		$('#page').prepend('<div id="fh5co-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>');
+
+//Garuang changes 17/3/2017 start
+$('.fh5co-nav .container .row').prepend('<a href=# class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>');
+//Garuang changes 17/3/2017 end
+
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#fh5co-offcanvas').append(clone1);
 		var clone2 = $('.menu-2 > ul').clone();
