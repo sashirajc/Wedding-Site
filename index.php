@@ -78,6 +78,25 @@ function getWish(){
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
+<style type="text/css">
+       .fh5co-nav {
+                        position:fixed;
+                        top:0;
+                        width:100%;
+                        z-index:2000;
+	        background: rgba(0, 0, 0, 0.1);
+                        }
+      .offcanvas #page
+	      {
+	       position: relative !important;
+	     }
+      #fh5co-offcanvas
+                   {
+	    position: fixed !important;
+	  }
+</style>
+
 	</head>
 	<body>
 
@@ -93,7 +112,7 @@ function getWish(){
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.php">Home</a></li>
-						<li id="event_button"><a href="#">Events</a></li>
+						<li id="event_button"><a href="#fh5co-event">Events</a></li>
 						<li id="story_button"><a href="#fh5co-couple-story">Timeline</a></li>
 						<li id="gallery_button"><a href="#fh5co-gallery">Gallery</a></li>
 						<li id="testimonial_button"><a href="#fh5co-testimonial">Wishes</a></li>
