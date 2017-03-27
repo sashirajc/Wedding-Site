@@ -56,7 +56,7 @@ $wish = getWish();
 
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-
+	<link rel="shortcut icon" href="bride-and-groom.ico" />
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -538,7 +538,7 @@ $wish = getWish();
 				</div>
 
 				<div><br></div>
-						
+
 <div class="row">
 	<div class="col-md-4 col-sm-4 col-md-offset-1">
 		<div class="radio-inline form-group" style="color:#d3d3d3">
@@ -565,7 +565,7 @@ $wish = getWish();
 
 				<div class="col-md-5 col-sm-5 col-md-offset-1">
 				<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food Preference							<span class="caret"></span>
+				<button class="btn btn-primary dropdown-toggle" type="button" id="food-button" data-toggle="dropdown">Food Preference							<span class="caret"></span>
 				</button>
 					<ul class="dropdown-menu" role="menu">
 					<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
@@ -575,7 +575,7 @@ $wish = getWish();
 				</div>
 
 		</div>
-	
+
 <div><br></div>
 				<div class="row">
 						<div class="col-md-4 col-sm-4 col-md-offset-4">
@@ -625,7 +625,7 @@ $wish = getWish();
 
 		</div>
 	</footer>
-	
+
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -773,10 +773,12 @@ $wish = getWish();
 
 	$("#veg").click(function(){
 		veg = 1;
+		$("#food-button").text('Vegetarian');
 	});
 
 	$("#non-veg").click(function(){
 		veg = 0;
+		$("#food-button").text('Non- Vegetarian');
 	});
 
 	$("#radio-button-2").click(function(){
