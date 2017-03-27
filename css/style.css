@@ -46,6 +46,16 @@ body {
   content: "";
 }
 
+#radio-button-1
+{
+height:30px;
+}
+
+#radio-button-2
+{
+height:30px;
+}
+
 a {
   color: #F14E95;
   -webkit-transition: 0.5s;

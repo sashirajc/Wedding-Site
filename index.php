@@ -486,6 +486,7 @@ $wish = getWish();
 			</div>
 		</div>
 	</div>
+</div>
 
 	<!-- Modal -->
   <div class="modal fade" id="wishesModal" role="dialog">
@@ -506,67 +507,77 @@ $wish = getWish();
   </div>
   </div>
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_1.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Are You Attending?</h2>
-					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
-				</div>
+<!--RSVP Section code begins here-->
+
+<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_6.jpg);">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Are You Attending?</h2>
+				<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
 			</div>
-			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline" onsubmit="return false">
-						<div class="row">
-							<div class="col-md-4 col-sm-4 col-md-offset-1">
-								<div class="form-group">
-									<label for="name" class="sr-only">Name</label>
-									<input type="name" class="form-control" id="rsvp_name" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-md-4 col-sm-4 col-md-offset-1">
-								<div class="form-group">
-									<label for="email" class="sr-only">Email</label>
-									<input type="email" class="form-control" id="rsvp_email" placeholder="email">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-						<div class="col-md-4 col-sm-4 col-md-offset-1">
-							<div class="radio-inline form-group">
-								<label class="radio-inline sr-only">Attending</label>
-									<input type="radio" name= "optradio" class="form-control" id="radio-button-1">Attending</input>
+		</div>
 
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="radio-inline form-group">
-								<label class="radio-inline sr-only">Not Attending</label>
-									<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending</input>
-							</div>
+		<div class="row animate-box">
+			<div class="col-md-10 col-md-offset-1">
+				<form class="form-inline" onsubmit="return false">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-md-offset-1">
+						<div class="form-group">
+						<label for="name" class="sr-only">Name</label>													<input type="name" class="form-control" id="rsvp_name" placeholder="Name">
 						</div>
 					</div>
 
-					<div class="row collapse" id="attending-options">
-						<div class="col-md-5 col-sm-5 col-md-offset-1">
-							Number of persons:
-							<input type="number" name="persons" id="rsvp_persons" min="1" max="5">
-
-					</div>
-					<div class="col-md-5 col-sm-5 col-md-offset-1">
-						<div class="dropdown">
-							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food Preference
-								<span class="caret"></span>
-							</button>
-								<ul class="dropdown-menu" role="menu">
-									<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
-									<li id="non-veg"><a role="menuitem" tabindex="-1">Non-vegetarian</a></li>
-								</ul>
+					<div class="col-md-4 col-sm-4 col-md-offset-1">
+						<div class="form-group">
+						<label for="email" class="sr-only">Email</label>
+						<input type="email" class="form-control" id="rsvp_email" placeholder="email">
 						</div>
 					</div>
-					</div>
-					<div class="row">
+				</div>
+
+				<div><br></div>
+						
+<div class="row">
+	<div class="col-md-4 col-sm-4 col-md-offset-1">
+		<div class="radio-inline form-group" style="color:#d3d3d3">
+		<!--<label class="radio-inline sr-only" id="labelid">Attending</label>-->
+		<input type="radio" name= "optradio" class="form-control" id="radio-button-1">Attending</input>
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-4 col-md-offset-1">
+		<div class="radio-inline form-group" style="color:#d3d3d3">
+		<!--<label class="radio-inline sr-only">Not Attending</label>-->
+		<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending</input>
+		</div>
+	</div>
+</div>
+
+<div><br></div>
+
+		<div class="row collapse" id="attending-options">
+				<div class="col-md-5 col-sm-5 col-md-offset-1" style="color:#FFFFFF;padding-top:10px">
+				Number of persons:
+				<input type="number" name="persons" id="rsvp_persons" min="1" max="5" style="color:#555555">
+<span><p>     </p></span>
+				</div>
+
+				<div class="col-md-5 col-sm-5 col-md-offset-1">
+				<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Food Preference							<span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu" role="menu">
+					<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
+					<li id="non-veg"><a role="menuitem" tabindex="-1">Non-vegetarian</a></li>
+					</ul>
+				</div>
+				</div>
+
+		</div>
+	
+<div><br></div>
+				<div class="row">
 						<div class="col-md-4 col-sm-4 col-md-offset-4">
 							<div class="form-group">
 								<button type="submit" class="btn btn-default btn-block" id="rsvp-submit">Submit</button>
@@ -578,6 +589,7 @@ $wish = getWish();
 			</div>
 		</div>
 	</div>
+<!--RSVP section ends-->
 
 	<!-- Modal -->
   <div class="modal fade" id="rsvpModal" role="dialog">
@@ -600,7 +612,7 @@ $wish = getWish();
 
 
 
-	<footer id="fh5co-footer" role="contentinfo">
+	<footer id="fh5co-footer" role="contentinfo" style="padding-top:20px;padding-bottom:5px">
 		<div class="container">
 
 			<div class="row copyright">
@@ -613,7 +625,7 @@ $wish = getWish();
 
 		</div>
 	</footer>
-	</div>
+	
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
