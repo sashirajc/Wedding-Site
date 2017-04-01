@@ -34,6 +34,16 @@ $wish = getWish();
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-96553664-1', 'auto');
+  			ga('send', 'pageview');
+
+		</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Sashi &amp; Elsie</title>
@@ -70,6 +80,8 @@ $wish = getWish();
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
@@ -204,7 +216,9 @@ $wish = getWish();
 										<span>Wednesday 24</span>
 										<span>May, 2017</span>
 									</div>
-									<p>Join us to witness the exchange of our marriage vows at <br> <br> Holy Trinity Church <br> Trinity Circle <br> Ulsoor <br> Bangalore - 560008</p>
+									<p>Join us to witness the exchange of our marriage vows at
+										<br> <br> Holy Trinity Church <br> Trinity Circle <br>
+										Ulsoor <br> Bangalore - 560008</p>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -220,7 +234,9 @@ $wish = getWish();
 										<span>Wednesday 24</span>
 										<span>May, 2017</span>
 									</div>
-									<p>Celebrate with us over dinner as we begin our life together at <br> <br> DRDO Community Hall <br> DRDO Township Phase 1<br> CV Raman Nagar <br> Bangalore - 560093</p>
+									<p>Celebrate with us over dinner as we begin our life together at
+										<br> <br> DRDO Community Hall <br> DRDO Township Phase 1<br>
+										CV Raman Nagar <br> Bangalore - 560093</p>
 								</div>
 							</div>
 						</div>
@@ -236,7 +252,8 @@ $wish = getWish();
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Two hearts to be joined as one</span>
 					<h2>Our lives thus far</h2>
-					<p>Through the mountains and valleys of life, we have laboured alone thus far. <br> Looking forward to journeying together and explore new lands.</p>
+					<p>Through the mountains and valleys of life, we have laboured alone thus far. <br>
+						Looking forward to journeying together and explore new lands.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -286,7 +303,8 @@ $wish = getWish();
 									<span class="date">October 5, 2014</span>
 								</div>
 								<div class="timeline-body">
-									<p>Like every other immigrant to Singapore through the last 2 centuries, with starstruck eyes and lofty dreams.</p>
+									<p>Like every other immigrant to Singapore through the last 2 centuries,
+										with starstruck eyes and lofty dreams.</p>
 								</div>
 							</div>
 						</li>
@@ -371,43 +389,23 @@ $wish = getWish();
   						<div class="carousel-inner" role="listbox">
     						<div class="item active">
       							<img src="/images/Gallery/Gallery-01.jpg" alt="Elsie's Graduation">
-      							<div class="carousel-caption">
-        							<h3>Elsie's Graduation</h3>
-        							<p>June 2015</p>
-      							</div>
     						</div>
 
     						<div class="item">
       							<img src="/images/Gallery/Gallery-02.jpg" alt="Sashi's Graduation">
-      							<div class="carousel-caption">
-        							<h3>Sashi's Graduation</h3>
-        							<p>April 2016</p>
-      							</div>
-    						</div>
+							</div>
 
-    						<div class="item">
+    						<!-- <div class="item">
       							<img src="/images/Gallery/Gallery-04.jpg" alt="Elsie">
-      							<div class="carousel-caption">
-        							<h3>Elsie in Dubai</h3>
-        							<p>December 2016</p>
-      							</div>
-    						</div>
+    						</div> -->
 
 							<div class="item">
       							<img src="/images/Gallery/Gallery-05.jpg" alt="Elsie">
-      							<div class="carousel-caption">
-        							<h3>Pledged to be married</h3>
-        							<p>February 2017</p>
-      							</div>
-    						</div>
+      						</div>
 
-							<div class="item">
+							<!-- <div class="item">
       							<img src="/images/Gallery/Gallery-06.jpg" alt="Sashi">
-      							<div class="carousel-caption">
-        							<h3>Sashi and Family</h3>
-        							<p>September 2014</p>
-      							</div>
-    						</div>
+    						</div> -->
   						</div>
 
   						<!-- Left and right controls -->
@@ -439,20 +437,28 @@ $wish = getWish();
 				<div class="row">
 					<div class="col-md-12 animate-box">
 						<div class="wrap-testimony">
-							<div class="owl-carousel-fullwidth">
-								<div class="item">
+							<div class="owl-carousel owl-theme">
+								<div class="owl-item">
 									<div class="testimony-slide active text-center">
-										<span><?php echo $wish[0]; ?></span>
+										<span><?php echo $wish[1]; ?></span>
 										<blockquote>
-											<p><?php echo $wish[1]; ?></p>
+											<p><?php echo $wish[0]; ?></p>
 										</blockquote>
 									</div>
 								</div>
-								<div class="item">
+								<div class="owl-item">
 									<div class="testimony-slide active text-center">
-										<span><?php echo $wish[0]; ?></span>
+										<span><?php echo $wish[1]; ?></span>
 										<blockquote>
-											<p><?php echo $wish[1]; ?></p>
+											<p><?php echo $wish[0]; ?></p>
+										</blockquote>
+									</div>
+								</div>
+								<div class="owl-item">
+									<div class="testimony-slide active text-center">
+										<span><?php echo $wish[1]; ?></span>
+										<blockquote>
+											<p><?php echo $wish[0]; ?></p>
 										</blockquote>
 									</div>
 								</div>
@@ -474,10 +480,12 @@ $wish = getWish();
 								<div class="col-md-4 col-sm-4">
 									<div class="form-group">
 										<label for="wishes" class="sr-only">Wishes</label>
-										<input type="text" class="form-control" name="wish" id="wishes_wish_form" placeholder="Write your wishes"sing >
+										<input type="text" class="form-control" name="wish" id="wishes_wish_form"
+										placeholder="Write your wishes"sing >
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-4">
+
+								<div class="col-md-4 col-sm-4" style="padding-top:7px">
 									<button type="submit" class="btn btn-default btn-block" id="wish-submit">Send Wish</button>
 								</div>
 							</form>
@@ -515,7 +523,7 @@ $wish = getWish();
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 				<h2>Are You Attending?</h2>
-				<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+				<p>Please fill this form to notify us that you are attending. Thanks.</p>
 			</div>
 		</div>
 
@@ -523,13 +531,14 @@ $wish = getWish();
 			<div class="col-md-10 col-md-offset-1">
 				<form class="form-inline" onsubmit="return false">
 				<div class="row">
-					<div class="col-md-4 col-sm-4 col-md-offset-1">
+					<div class="col-md-4 col-sm-4 col-md-offset-1" style="color:#FFFFFF">
 						<div class="form-group">
-						<label for="name" class="sr-only">Name</label>													<input type="name" class="form-control" id="rsvp_name" placeholder="Name">
+						<label for="name" class="sr-only">Name</label>
+						<input type="name" class="form-control" id="rsvp_name" placeholder="Name">
 						</div>
 					</div>
 
-					<div class="col-md-4 col-sm-4 col-md-offset-1">
+					<div class="col-md-4 col-sm-4 col-md-offset-1" style="color:#FFFFFF">
 						<div class="form-group">
 						<label for="email" class="sr-only">Email</label>
 						<input type="email" class="form-control" id="rsvp_email" placeholder="email">
@@ -538,49 +547,54 @@ $wish = getWish();
 				</div>
 
 				<div><br></div>
-
-<div class="row">
-	<div class="col-md-4 col-sm-4 col-md-offset-1">
-		<div class="radio-inline form-group" style="color:#d3d3d3">
-		<!--<label class="radio-inline sr-only" id="labelid">Attending</label>-->
-		<input type="radio" name= "optradio" class="form-control" id="radio-button-1">Attending</input>
-		</div>
-	</div>
-	<div class="col-md-4 col-sm-4 col-md-offset-1">
-		<div class="radio-inline form-group" style="color:#d3d3d3">
-		<!--<label class="radio-inline sr-only">Not Attending</label>-->
-		<input type="radio"  name= "optradio" class="form-control" id="radio-button-2">Not Attending</input>
-		</div>
-	</div>
-</div>
-
-<div><br></div>
-
-		<div class="row collapse" id="attending-options">
-				<div class="col-md-5 col-sm-5 col-md-offset-1" style="color:#FFFFFF;padding-top:10px">
-				Number of persons:
-				<input type="number" name="persons" id="rsvp_persons" min="1" max="5" style="color:#555555">
-<span><p>     </p></span>
-				</div>
-
-				<div class="col-md-5 col-sm-5 col-md-offset-1">
-				<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" id="food-button" data-toggle="dropdown">Food Preference							<span class="caret"></span>
-				</button>
-					<ul class="dropdown-menu" role="menu">
-					<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
-					<li id="non-veg"><a role="menuitem" tabindex="-1">Non-vegetarian</a></li>
-					</ul>
-				</div>
-				</div>
-
-		</div>
-
-<div><br></div>
 				<div class="row">
-						<div class="col-md-4 col-sm-4 col-md-offset-4">
+					<div class="col-md-4 col-sm-4 col-md-offset-1">
+						<div class="radio-inline form-group" style="color:#FFFFFF">
+							<!--<label class="radio-inline sr-only" id="labelid">Attending</label>-->
+							<input type="radio" name= "optradio" class="form-control" id="radio-button-1"></input><span>Attending</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-md-offset-1">
+						<div class="radio-inline form-group" style="color:#FFFFFF">
+							<!--<label class="radio-inline sr-only">Not Attending</label>-->
+							<input type="radio"  name= "optradio" class="form-control" id="radio-button-2"></input><span>Not Attending</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<br>
+				</div>
+
+				<div class="row collapse" id="attending-options">
+					<div class="col-md-5 col-sm-5 col-md-offset-1" style="color:#FFFFFF;padding-top:10px">
+						Number of persons:
+						<input type="number" name="persons" id="rsvp_persons" min="1" max="5"
+						style="color:#555555">
+						<span><p></p></span>
+					</div>
+					<div class="col-md-5 col-sm-5" style="color:#FFFFFF;padding-top:10px">
+						<div class="pull-left">Food Preference </div>
+						<div class="dropdown">
+							<button class="btn-md dropdown-toggle pull-left" type="button" id="food-button"
+							data-toggle="dropdown" style="color:#000000">
+							Food Preference<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li id="veg"><a role="menuitem" tabindex="-1">Vegetarian</a></li>
+								<li id="non-veg"><a role="menuitem" tabindex="-1">Non-Vegetarian</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div>
+					<br>
+				</div>
+				<div class="row">
+						<div class="col-md-8 col-sm-8 col-md-offset-4 " style="padding-left:50px">
 							<div class="form-group">
-								<button type="submit" class="btn btn-default btn-block" id="rsvp-submit">Submit</button>
+								<button type="submit" class="btn btn-default" id="rsvp-submit">Submit</button>
 							</div>
 						</div>
 					</div>
@@ -767,9 +781,23 @@ $wish = getWish();
 		});
 	});
 
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        }
+    }
+});
+
 	// $(document).ready(function(){
 	// 	$('#attending-options').removeClass('hidden');
 	// });
+	$(document).ready(function(){
+  		$(".owl-carousel").owlCarousel();
+	});
 
 	$("#veg").click(function(){
 		veg = 1;
@@ -778,19 +806,19 @@ $wish = getWish();
 
 	$("#non-veg").click(function(){
 		veg = 0;
-		$("#food-button").text('Non- Vegetarian');
+		$("#food-button").text('Non-Vegetarian');
 	});
 
 	$("#radio-button-2").click(function(){
 		$('#attending-options').addClass('collapse');
 	 	attending_status = 0;
-		console.log(attending_status);
+		// console.log(attending_status);
 	});
 
 	$("#radio-button-1").click(function(){
 		$('#attending-options').removeClass('collapse');
 		attending_status = 1;
-		console.log(attending_status);
+		// console.log(attending_status);
 	});
 
 	$(document).ready(function(){
