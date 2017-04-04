@@ -23,9 +23,18 @@
 
 		$('#page').prepend('<div id="fh5co-offcanvas" />');
 
-//Garuang changes 17/3/2017 start
+//Garuang changes 17/3/2017 start - for showing ND
 $('.fh5co-nav .container .row').prepend('<a href=# class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>');
 //Garuang changes 17/3/2017 end
+
+//Gaurang changes 2/4/2017 start - for closing ND
+
+		// $('.fh5co-offcanvas ul li').on('click', function (){
+		$('body').delegate('#fh5co-offcanvas a', 'click', function(){
+			$( ".js-fh5co-nav-toggle" ).trigger( "click" );
+		});
+	
+	//Gaurang changes 2/4/2017 end
 
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#fh5co-offcanvas').append(clone1);

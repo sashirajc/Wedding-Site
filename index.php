@@ -541,7 +541,7 @@ $wish = getWish();
 					<div class="col-md-4 col-sm-4 col-md-offset-1" style="color:#FFFFFF">
 						<div class="form-group">
 						<label for="email" class="sr-only">Email</label>
-						<input type="email" class="form-control" id="rsvp_email" placeholder="email">
+						<input type="email" class="form-control" id="rsvp_email" placeholder="email(optional)">
 						</div>
 					</div>
 				</div>
