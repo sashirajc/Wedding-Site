@@ -34,7 +34,15 @@ $wish = getWish();
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-K9KTB28');
+		</script>
+		<!-- End Google Tag Manager -->
+		<!-- <script>
   			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -43,26 +51,13 @@ $wish = getWish();
   			ga('create', 'UA-96553664-1', 'auto');
   			ga('send', 'pageview');
 
-		</script>
+		</script> -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Sashi &amp; Elsie</title>
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="nofollow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Wedding Site of Elsie and Sashi" />
-	<meta name="keywords" content="sashi, elsie" />
-	<meta name="author" content="Sashiraj" />
-
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
 
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
@@ -114,6 +109,10 @@ $wish = getWish();
 
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9KTB28"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
 
 	<div class="fh5co-loader"></div>
 
@@ -333,7 +332,7 @@ $wish = getWish();
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/comingsoon.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/engagement.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Sashi and Elsie get engaged </h3>
@@ -395,6 +394,10 @@ $wish = getWish();
       							<img src="/images/Gallery/Gallery-02.jpg" alt="Sashi's Graduation">
 							</div>
 
+							<div class="item">
+      							<img src="/images/Gallery/Gallery-03.jpg" alt="Sashi-Elsie Engagement">
+							</div>
+
     						<!-- <div class="item">
       							<img src="/images/Gallery/Gallery-04.jpg" alt="Elsie">
     						</div> -->
@@ -406,7 +409,21 @@ $wish = getWish();
 							<!-- <div class="item">
       							<img src="/images/Gallery/Gallery-06.jpg" alt="Sashi">
     						</div> -->
+
+							<div class="item">
+								<img src="/images/Gallery/Gallery-07.jpg" alt="Couple with Sashi's family">
+							</div>
+
+							<div class="item">
+								<img src="/images/Gallery/Gallery-08.jpg" alt="Couple with Elsie's family">
+							</div>
+
+							<div class="item">
+								<img src="/images/Gallery/Gallery-09.jpg" alt="Both families">
+							</div>
   						</div>
+
+
 
   						<!-- Left and right controls -->
   						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
