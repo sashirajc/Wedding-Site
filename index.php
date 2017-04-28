@@ -9,7 +9,7 @@ function query_Executor($query){
 		$stmt = $conn -> prepare($query);
 		$stmt -> execute();
 
-		return $stmt -> fetch();
+		return $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
 	}
 	catch (PDOException $e){
@@ -19,12 +19,20 @@ function query_Executor($query){
 // $data = query_Executor('SELECT Name FROM weddingDB.Wishes WHERE idWishes="0"')
 
 function getWish(){
-	return query_Executor("SELECT Name,Wishes FROM weddingDB.Wishes LIMIT 3");
+	return query_Executor("SELECT Name,Wishes FROM weddingDB.Wishes LIMIT 5");
 
 	// echo "<script>console.log('". $data[1] ."');</script>";
 }
 
 $wish = getWish();
+$wish1 = $wish[0];
+$wish2 = $wish[1];
+$wish3 = $wish[2];
+$wish4 = $wish[3];
+$wish5 = $wish[4];
+// $wish6 = $wish[5];
+
+// echo "<script>console.log(". json_encode($wish) .")</script>";
 
 ?>
 
@@ -457,28 +465,55 @@ $wish = getWish();
 							<div class="owl-carousel owl-theme">
 								<div class="owl-item">
 									<div class="testimony-slide active text-center">
-										<span><?php echo $wish[1]; ?></span>
+										<span><?php echo $wish1['Wishes']; ?></span>
 										<blockquote>
-											<p><?php echo $wish[0]; ?></p>
+											<p><?php echo $wish1['Name']; ?></p>
 										</blockquote>
 									</div>
 								</div>
 								<div class="owl-item">
 									<div class="testimony-slide active text-center">
-										<span><?php echo $wish[1]; ?></span>
+										<span><?php echo $wish2['Wishes']; ?></span>
 										<blockquote>
-											<p><?php echo $wish[0]; ?></p>
+											<p><?php echo $wish2['Name']; ?></p>
 										</blockquote>
 									</div>
 								</div>
 								<div class="owl-item">
 									<div class="testimony-slide active text-center">
-										<span><?php echo $wish[1]; ?></span>
+										<span><?php echo $wish3['Wishes']; ?></span>
 										<blockquote>
-											<p><?php echo $wish[0]; ?></p>
+											<p><?php echo $wish3['Name']; ?></p>
 										</blockquote>
 									</div>
 								</div>
+
+								<div class="owl-item">
+									<div class="testimony-slide active text-center">
+										<span><?php echo $wish4['Wishes']; ?></span>
+										<blockquote>
+											<p><?php echo $wish4['Name']; ?></p>
+										</blockquote>
+									</div>
+								</div>
+
+								<div class="owl-item">
+									<div class="testimony-slide active text-center">
+										<span><?php echo $wish5['Wishes']; ?></span>
+										<blockquote>
+											<p><?php echo $wish5['Name']; ?></p>
+										</blockquote>
+									</div>
+								</div>
+
+								<!-- <div class="owl-item">
+									<div class="testimony-slide active text-center">
+										<span><?php echo $wish6['Wishes']; ?></span>
+										<blockquote>
+											<p><?php echo $wish6['Name']; ?></p>
+										</blockquote>
+									</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
